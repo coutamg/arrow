@@ -69,6 +69,7 @@ class ARROW_EXPORT Fingerprintable {
  public:
   virtual ~Fingerprintable();
 
+  // 具体实现参考 ComputeFingerprint 的具体实现
   const std::string& fingerprint() const {
     auto p = fingerprint_.load();
     if (ARROW_PREDICT_TRUE(p != NULLPTR)) {
